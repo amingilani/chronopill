@@ -2,7 +2,7 @@
 
 apt-get update && apt-get upgrade -y
 
-sudo apt-get install -y
+sudo apt-get install -y \
   hfsprogs \
   hfsplus \
   build-essential \
