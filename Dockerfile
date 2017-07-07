@@ -6,4 +6,4 @@ RUN ["/bin/bash", "/scripts/setup.sh"]
 
 RUN ["/bin/bash", "/scripts/install-netatalk.sh"]
 
-CMD ['netatalk', '-V']
+ENTRYPOINT ['/bin/bash']
