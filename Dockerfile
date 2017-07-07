@@ -49,4 +49,4 @@ RUN wget http://prdownloads.sourceforge.net/netatalk/netatalk-3.1.10.tar.gz && \
     make install
 
 RUN ["/bin/bash", "/scripts/setup.sh"]
-ENTRYPOINT "/bin/bash"
+ENTRYPOINT ["/bin/bash", "/scripts/mount-and-start.sh"]
