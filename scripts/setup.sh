@@ -3,9 +3,10 @@
 apt-get update && apt-get upgrade -y
 
 sudo apt-get install -y \
-  hfsprogs \
-  hfsplus \
+  avahi-daemon \
   build-essential \
+  hfsplus \
+  hfsprogs \
   libevent-dev \
   libssl-dev \
   libgcrypt11-dev \
@@ -15,16 +16,16 @@ sudo apt-get install -y \
   libdb-dev \
   libtdb-dev \
   libmysqlclient-dev \
-  avahi-daemon \
   libavahi-client-dev \
   libacl1-dev \
   libldap2-dev \
   libcrack2-dev \
-  systemtap-sdt-dev \
   libdbus-1-dev \
   libdbus-glib-1-dev \
   libglib2.0-dev \
   libio-socket-inet6-perl \
-  tracker \
   libtracker-sparql-1.0-dev \
-  libtracker-miner-1.0-dev
+  libtracker-miner-1.0-dev \
+  systemtap-sdt-dev \
+  tracker \
+  wget
