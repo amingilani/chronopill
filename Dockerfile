@@ -48,36 +48,5 @@ RUN wget http://prdownloads.sourceforge.net/netatalk/netatalk-3.1.10.tar.gz && \
     make && \
     make install
 
-
-RUN sed -i '/^hosts:/ s/$/ mdns4 mdns/' /etc/nsswitch.conf
-
-RUN cat <<EOT >> /etc/avahi/services/afpd.service
-    line 1
-    line 2
-    <?xml version="1.0" standalone='no'?><!--*-nxml-*-->
-    <!DOCTYPE service-group SYSTEM "avahi-service.dtd">
-    <service-group>
-        <name replace-wildcards="yes">%h</name>
-        <service>
-            <type>_afpovertcp._tcp</type>
-            <port>548</port>
-        </service>
-        <service>
-            <type>_device-info._tcp</type>
-            <port>0</port>
-            <txt-record>model=TimeCapsule</txt-record>
-        </service>
-    </service-group>
-EOT
-
-RUN cat <<EOT >> /usr/local/etc/afp.conf
-    [Global]
-      mimic model = TimeCapsule6,106
-
-    [Time Machine]
-      path = /media/tm
-      time machine = yes
-EOT
-
-
+RUN ["/bin/bash", "/scripts/setup.sh"]
 ENTRYPOINT ["/bin/bash", "/scripts/mount-and-start.sh"]
