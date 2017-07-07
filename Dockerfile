@@ -2,8 +2,8 @@ FROM resin/raspberrypi3-debian:jessie
 
 COPY scripts /scripts
 
-RUN apt-get update &&
-    apt-get upgrade -y &&
+RUN apt-get update && \
+    apt-get upgrade -y && \
     apt-get install -y \
       avahi-daemon \
       build-essential \
@@ -32,9 +32,9 @@ RUN apt-get update &&
       tracker \
       wget
 
-RUN wget http://prdownloads.sourceforge.net/netatalk/netatalk-3.1.10.tar.gz &&
-    tar -xf netatalk-3.1.10.tar.gz &&
-    cd netatalk-3.1.10 &&
+RUN wget http://prdownloads.sourceforge.net/netatalk/netatalk-3.1.10.tar.gz && \
+    tar -xf netatalk-3.1.10.tar.gz && \
+    cd netatalk-3.1.10 && \
     ./configure \
             --with-init-style=debian-systemd \
             --without-libevent \
@@ -44,8 +44,8 @@ RUN wget http://prdownloads.sourceforge.net/netatalk/netatalk-3.1.10.tar.gz &&
             --with-pam-confdir=/etc/pam.d \
             --with-dbus-daemon=/usr/bin/dbus-daemon \
             --with-dbus-sysconf-dir=/etc/dbus-1/system.d \
-            --with-tracker-pkgconfig-version=1.0 &&
-    make &&
+            --with-tracker-pkgconfig-version=1.0 && \
+    make && \
     make install
 
 
