@@ -1,7 +1,5 @@
 FROM resin/raspberrypi3-debian:jessie
 
-COPY scripts /scripts
-
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y \
@@ -47,6 +45,8 @@ RUN wget http://prdownloads.sourceforge.net/netatalk/netatalk-3.1.10.tar.gz && \
             --with-tracker-pkgconfig-version=1.0 && \
     make && \
     make install
+
+COPY scripts /scripts
 
 RUN ["/bin/bash", "/scripts/setup.sh"]
 ENTRYPOINT ["/bin/bash", "/scripts/mount-and-start.sh"]
