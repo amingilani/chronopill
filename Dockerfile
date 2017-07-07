@@ -5,5 +5,3 @@ COPY scripts /scripts
 RUN ["/bin/bash", "/scripts/setup.sh"]
 
 RUN ["/bin/bash", "/scripts/install-netatalk.sh"]
-
-ENTRYPOINT ['/bin/bash']
