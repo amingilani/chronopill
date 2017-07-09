@@ -52,5 +52,4 @@ ENV INITSYSTEM on
 
 COPY src /src
 
-RUN ["/bin/bash", "/src/scripts/setup-afp.sh"]
-CMD ["/bin/bash", "/src/scripts/mount-and-start.sh"]
+CMD ["/bin/bash", "/src/scripts/setup.sh"]
