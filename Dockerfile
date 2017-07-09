@@ -50,7 +50,7 @@ RUN wget http://prdownloads.sourceforge.net/netatalk/netatalk-3.1.10.tar.gz && \
 # enable container init system.
 ENV INITSYSTEM on
 
-COPY scripts /scripts
+COPY src /src
 
 RUN ["/bin/bash", "/src/scripts/setup-ssh.sh"]
 RUN ["/bin/bash", "/src/scripts/setup-afp.sh"]
