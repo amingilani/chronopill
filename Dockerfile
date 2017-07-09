@@ -46,7 +46,10 @@ RUN wget http://prdownloads.sourceforge.net/netatalk/netatalk-3.1.10.tar.gz && \
     make && \
     make install
 
+# enable container init system.
+ENV INITSYSTEM on
+
 COPY scripts /scripts
 
 RUN ["/bin/bash", "/scripts/setup.sh"]
-ENTRYPOINT ["/bin/bash", "/scripts/mount-and-start.sh"]
+CMD ["/bin/bash", "/scripts/mount-and-start.sh"]
