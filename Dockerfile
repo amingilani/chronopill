@@ -26,6 +26,7 @@ RUN apt-get update && \
       libio-socket-inet6-perl \
       libtracker-sparql-1.0-dev \
       libtracker-miner-1.0-dev \
+      openssh-server \
       systemtap-sdt-dev \
       tracker \
       wget
@@ -51,5 +52,6 @@ ENV INITSYSTEM on
 
 COPY scripts /scripts
 
-RUN ["/bin/bash", "/scripts/setup.sh"]
+RUN ["/bin/bash", "/scripts/setup-ssh.sh"]
+RUN ["/bin/bash", "/scripts/setup-afp.sh"]
 CMD ["/bin/bash", "/scripts/mount-and-start.sh"]
