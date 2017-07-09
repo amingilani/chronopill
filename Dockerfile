@@ -52,6 +52,6 @@ ENV INITSYSTEM on
 
 COPY scripts /scripts
 
-RUN ["/bin/bash", "/scripts/setup-ssh.sh"]
-RUN ["/bin/bash", "/scripts/setup-afp.sh"]
-CMD ["/bin/bash", "/scripts/mount-and-start.sh"]
+RUN ["/bin/bash", "/src/scripts/setup-ssh.sh"]
+RUN ["/bin/bash", "/src/scripts/setup-afp.sh"]
+CMD ["/bin/bash", "/src/scripts/mount-and-start.sh"]
