@@ -1,9 +1,9 @@
 # ChronoPill
 
-A Resin application for a DIY Time Capsule.
+A Resin application for a DIY [Apple Time Capsule](](https://www.apple.com/lae/airport-time-capsule/)).
 
 As a lazy developer, I wanted a wireless Time Machine backup solution without breaking the bank for
-an [overpriced NAS drive](https://www.apple.com/lae/airport-time-capsule/). This
+an overpriced NAS drive. This
 app assume a Raspberry Pi 3 with a USB disk drive.
 
 ## Setup
