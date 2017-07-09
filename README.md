@@ -28,3 +28,22 @@ Settings via environment variables:
 
 - `USERNAME`: username for the time machine user.
 - `PASSWORD`: password for the time machine user.
+
+## Travis CI
+
+Because I'm extra lazy, I let Travis deploy my code instead of pushing manually. Go ahead and enable [Travis](https://travis-ci.org) on your project.
+
+Create and copy a deploy SSH key:
+
+```
+ssh-keygen # Will prompt for a file name, input one like 'id_rsa'
+echo -n "\""; cat id_rsa | awk 1 ORS='\\n'; echo "\""
+# Don't forget to copy the quotation marks!
+```
+
+Add the following variables to your travis build (keep them secret):
+
+- `RESIN_DEPLOY_KEY` - the SSH key you copied above
+- `RESIN_REMOTE` - the git repository to deploy your resin app
+
+**Remember to star this repo!**
