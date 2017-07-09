@@ -46,4 +46,11 @@ Add the following variables to your travis build (keep them secret):
 - `RESIN_DEPLOY_KEY` - the SSH key you copied above
 - `RESIN_REMOTE` - the git repository to deploy your resin app
 
+## My Hardware
+
+I mean, you don't really need the exact hardware I used, but I have:
+
+- [A Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+- [A 1 TB Transcend External HDD](https://www.amazon.com/Transcend-StoreJet-Military-External-TS1TSJ25M3/dp/B005MNGQ6C)
+
 **Remember to star this repo!**
