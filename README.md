@@ -8,8 +8,6 @@ app assume a Raspberry Pi 3 with a USB disk drive.
 
 ## Setup
 
-There are three parts to this setup.
-
 1. Signup at [Resin.io](https://resin.io/), create an app, and follow the
    the instructions to install to a Raspberry Pi 3
 1. Either give your Pi a static IP or configure a static IP for it via your DNS
